@@ -1,13 +1,185 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Root CSS */
+
+:root {
+  --black : #070A0E;
+  --white : #FFFFFF;
+  --green : #00D395;
+  --grey  : #657786;
+  --shadow : rgb(20 21 26/10%) 0px 0px 1px,rgb(71 77 87/8%) 0px 7px 14px,rgb(20 21 26/8%) 0px 3px 6px;
 }
+
+/* Layout CSS */
+
+.container {
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+/* Wallet Connect Modal */
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.modal-container h3{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.modal-container p {
+  font-size: 15px;
+  color : var(--grey);
+}
+
+.connect-container {
+  margin-top: 2rem;
+}
+
+.walletconnect-qrcode__image{
+  height: 250px;
+  width: 250px;
+}
+
+.walletconnect-modal__base {
+  max-width: 400px !important;
+}
+
+.connect-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 6px;
+  width: 310px;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s;
+  margin-bottom: 1rem;
+}
+
+.connect-item h1 {
+  font-size: 20px;
+  padding-top: 0.5rem;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+}
+
+.connect-item img{
+  width: 30px;
+  height: 30px;
+}
+
+.connect-item:hover {
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.spinner-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.ant-spin-dot-item {
+  background-color: var(--green) !important;
+}
+
+/* Home CSS */
+
+.jumbotron {
+  background-color: var(--black);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron h1 {
+  color : var(--white);
+  font-size: 62px;
+  font-weight: 500;
+  width: 70%;
+}
+
+.jumbotron span {
+  color : var(--green) !important;
+}
+
+.ant-modal {
+  width: 350px !important;
+}
+
+/* Navbar CSS */
+
+.navbar-wrapper {
+  background-color: var(--black);
+  color : var(--white);
+  height: 75px;
+}
+
+.navbar-container {
+  display: grid;
+  grid-template-columns: 25% 60% 15%;
+  align-items: center;
+}
+
+.navbar-logo h1{
+  font-size: 22px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color : var(--white);
+}
+
+.navbar-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.navbar-elements li {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button {
+  border : 1px solid var(--green);
+  background-color: var(--black);
+  color : var(--green) !important;
+  padding : 0.5rem 2rem;
+  margin-top: 1.3rem;
+  border-radius: 3px;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.5s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--green);
+  color : var(--white) !important;
+}
+
+.disconnect-wallet {
+  border : 1px solid var(--green) !important;
+  background-color: var(--green) !important;
+  color : var(--white) !important;
+  padding : 0.5rem 2rem;
+  margin-top: 1.3rem;
+  border-radius: 3px;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.5s;
+}
+
