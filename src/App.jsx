@@ -27,7 +27,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       modal: false,
-      signer: null,
+      signer: null, // Singer required for transaction - Provider will open up a signer
       connecting: false,
       address: '',
       connected: false
